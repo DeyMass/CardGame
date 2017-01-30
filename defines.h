@@ -11,8 +11,15 @@
 #define CONNECTION_SUCCESS	1
 #define CONNECTION_ERROR	-1
 
+#define READY_FOR_START		1
+#define READY_FOR_CONECT	2
+#define GAME_END			100
+
 #define MESSAGE_LENGTH		40
 #define FIRST_MESSAGE		"HI, SERVER! MY CODE #742654"
+
+#define DECK_SIZE			36
+#define START_HAND			4
 
 //			0			1		2	3
 enum Suit {Piki = 0, Kresti, Chervi, Bubi};

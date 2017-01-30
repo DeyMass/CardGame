@@ -2,10 +2,7 @@
 #define CARD_H
 
 #include <QObject>
-#ifdef CLIENT
-	#include <QImage>
-	#include <defines.h>
-#endif //CLIENT
+#include <../defines.h>
 
 class Card : public QObject
 {

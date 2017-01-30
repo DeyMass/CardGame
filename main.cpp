@@ -1,3 +1,5 @@
+#define CLIENT
+
 #include "mainwindow.h"
 #include <player.h>
 #include <QApplication>
@@ -7,11 +9,17 @@ int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
 	MainWindow w;
-	w.show();
-
-	int ERROR_CODE;
 	Player* pl;
 	pl = new Player;
-	pl->start();
-	return a.exec();
+	pl->connect();
+	if (pl->checkStatus() == !READY_FOR_START){
+		system("echo Connection timed out! && pause");
+		return -1;
+	}
+	else
+		pl->start();
+	w.show();
+	//while(pl->checkStatus() != GAME_END)
+	//	pl->tick();
+	return 1;
 }

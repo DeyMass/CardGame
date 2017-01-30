@@ -26,12 +26,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp\
         mainwindow.cpp \
     player.cpp \
-    card.cpp
+    card.cpp \
+    MyDeckList.cpp
 
 HEADERS  += mainwindow.h \
 defines.h \
     player.h \
-    card.h
+    card.h \
+    MyDeckList.h
 
 FORMS    += mainwindow.ui
 
